@@ -77,12 +77,41 @@ source drake_env/bin/activate
 pip install -r requirements.txt
 ```
 
-
 3. Khởi động Jupyter Notebook:
 ```bash
 jupyter notebook
 ```
 *(Từ giao diện Jupyter gốc, bạn có thể dễ dàng truy cập vào các tệp bài giảng và thực hành ở bất kỳ chương nào).*
+
+### Tùy chọn C: Chạy trực tiếp trên VS Code (Khuyên dùng cho Kỹ sư/Nhà phát triển)
+
+Sử dụng Visual Studio Code mang lại trải nghiệm tích hợp tốt nhất khi bạn có thể vừa viết code, gỡ lỗi toán học và xem mô phỏng trên cùng một giao diện.
+
+Cách 1: Trải nghiệm "Plug-and-Play" với Dev Containers (Tốt nhất)
+
+1. Cài đặt tiện ích mở rộng Dev Containers (ID: ms-vscode-remote.remote-containers) trong VS Code.
+
+2. Clone repository và mở thư mục gốc bằng VS Code.
+
+3. Nhấn Ctrl+Shift+P (hoặc Cmd+Shift+P trên macOS), gõ và chọn: Dev Containers: Reopen in Container.
+
+4.VS Code sẽ tự động xây dựng môi trường, cài đặt thư viện và mở workspace. Bạn có thể chạy trực tiếp bất kỳ tệp .ipynb nào.
+
+Cách 2: Chạy với môi trường ảo cục bộ (Local Venv)
+
+1. Đảm bảo bạn đã cài đặt môi trường ảo ở thư mục gốc (pip install -r requirements.txt).
+
+2. Mở tệp .ipynb bất kỳ trong VS Code.
+
+3. Ở góc trên cùng bên phải của Notebook, chọn Select Kernel -> Python Environments -> Chọn môi trường ảo của bạn.
+
+* 📺 Mẹo xem mô phỏng 3D (Meshcat) ngay trong VS Code: Hệ thống mô phỏng Drake sử dụng Meshcat (thường chạy ở cổng 7000). Để xem mô phỏng mà không cần mở trình duyệt web:
+
+1. Chạy khối lệnh khởi tạo Meshcat trong notebook.
+
+2. Nhấn Ctrl+Shift+P, gõ lệnh: Simple Browser: Show.
+
+3. Dán http://localhost:7000 vào thanh địa chỉ. Màn hình VS Code sẽ chia đôi: một bên là mã nguồn, một bên là đồ họa 3D.
 
 ---
 
@@ -93,3 +122,15 @@ Repository này mang tính chất tổng hợp và kế thừa tài nguyên họ
 * **Tài liệu giáo trình chính (Textbook):** > Tedrake, Russ. *Underactuated Robotics: Algorithms for Walking, Running, Swimming, Flying, and Manipulation*. (Course Notes for MIT 6.8210).
 * **Khóa học gốc (Original Course):** > [MIT 6.8210: Underactuated Robotics (Spring 2024)](https://underactuated.csail.mit.edu/index.html). Khóa học được thiết kế và giảng dạy bởi Giáo sư Russ Tedrake tại Viện Công nghệ Massachusetts (MIT).
 * **Công cụ mô phỏng (Simulation Framework):** > Hệ thống bài tập được triển khai trên **[Drake](https://drake.mit.edu/)** – một thư viện mã nguồn mở C++/Python được phát triển bởi Phòng thí nghiệm Robot Hàng không Di động (Robot Locomotion Group) tại MIT.
+
+---
+
+🗺 4. Lộ trình học tập (Roadmap)
+
+Việc học các hệ thống phi tuyến yêu cầu một quy trình tư duy logic mạch lạc. Không nên bỏ qua lý thuyết để tiến thẳng vào việc chạy mã nguồn mô phỏng. Hãy tuân thủ nghiêm ngặt lộ trình đã được biên soạn.
+
+---
+
+🤝 5. Đóng góp (Contributing)
+
+Dự án này được xây dựng dựa trên triết lý mã nguồn mở và học tập cộng tác. Mọi đóng góp nhằm hoàn thiện tài liệu, tối ưu hóa thuật toán hoặc phát triển các bài toán ứng dụng mới (ví dụ: mô hình hóa continuum robotics, soft robotics) đều được hoan nghênh.
